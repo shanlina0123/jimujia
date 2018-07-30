@@ -104,13 +104,13 @@ class BusinessServerLogin extends ServerBase
     {
         $roleid = $admin_user->roleid;
         $tagKey = base64_encode(mosaic("", $tag, $admin_user->id));
-        return Cache::tags($tag)->remember($tagKey, config('configure.sCache'), function () use ($admin_user, $roleid) {
+       return Cache::tags($tag)->remember($tagKey, config('configure.sCache'), function () use ($admin_user, $roleid) {
             //角色的权限
             $roleFunc = FilterRoleFunction::where("roleid", $roleid)->get();
             $funcids = array_pluck($roleFunc, "functionid");
             $data["funcids"] = $funcids;
             //菜单权限
-            $menueList = $authControler = FilterFunction::select("id", "menuname", "url", "pid", "level")->whereIn("id", $funcids)->where("status", 1)->where("ismenu", 1)->get();
+            $menueList = $authControler = FilterFunction::select("id", "menuname", "url", "pid", "level")->whereIn("id", $funcids)->where("status", 1)->where("ismenu", 1)->orderBy("sort")->get();
             $menueArray = list_to_tree($menueList->toArray(), "id", "pid", "_child", 0);
             $data["menue"] = $menueArray;
 
@@ -120,6 +120,6 @@ class BusinessServerLogin extends ServerBase
                 $data["islook"] = max($functionLook);
             }
             return $data;
-        });
+       });
     }
 }

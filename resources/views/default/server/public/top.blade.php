@@ -1,4 +1,4 @@
-<div class="layui-logo"><a href="{{route('index')}}"><img src="{{pix_asset('server/images/topLogo.png')}}"></a></div>
+<div class="layui-logo"><a href="{{route('index')}}"><img src="{{pix_asset('server/images/topMainLogo.png')}}"></a></div>
 <ul class="layui-nav layui-layout-right">
     <li class="layui-nav-item" >
         <a href="http://showdoc.yygsoft.com/web/#/page/1" target="_blank" title="帮助中心" style="padding: 0 15px;"><img src="{{pix_asset('server/images/help.png')}}" width="32"></a>

@@ -47,7 +47,7 @@ return [
      * -----------------------------
      */
      'sms_cache'=>10,//短信过期时间
-     'is_sms'=>true,//true 开启短息 false 关闭短息
+     'is_sms'=>false,//true 开启短息 false 关闭短息
 
     /***
      * ----------------------------
@@ -103,8 +103,8 @@ return [
 
     //外连接配置
     "website"=>[
-        "home"=>"http://www.yygsoft.com",
-        "tel"=>"029 - 89379272",
+        "home"=>"http://www.jimujiazx.com",
+        "tel"=>"4000-300-599",
         "time"=>"(周一至周六09:00-18:00)"
     ],
 	

@@ -7,15 +7,14 @@
 .loginWrap {
   position: fixed;
   width: 500px;
-  max-height: 380px;
+  max-height: 350px;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
   padding: 20px 10px;
-  background-color: #fff;
+  background-color: #f5f6f7;
   border-radius: 5px;
-  background: url(../images/blackbg.png);
   margin: auto;
 }
 .loginLogo {
@@ -25,7 +24,7 @@
 }
 .loginInner .layui-tab-title li {
   width: 220px;
-  color: #fff;
+  color: #666;
 }
 .loginBtn .loginButton {
   width: 100%;

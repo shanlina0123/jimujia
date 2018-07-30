@@ -32,7 +32,7 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <!--顶部导航-->
-    <div class="layui-header" id="header">
+    <div class="layui-header" id="header" style="background-color: #393D49">
         @include('server.public.top')
     </div>
     <!--左侧导航-->

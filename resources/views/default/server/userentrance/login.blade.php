@@ -72,10 +72,6 @@
                             <div class="layui-form-item loginBtn">
                                 <button class="layui-btn loginButton" type="button" id="btn_submit1">登录</button>
                             </div>
-                            <div class="layui-form-item loginLink clearfix">
-                                <a href="{{route('recover-pass')}}" class="fl">忘记密码？</a>
-                                <a href="{{route('register')}}" class="fr">还没有账号？快去注册吧 >></a>
-                            </div>
                         </form>
                     </div>
                     <!--手机号码登录-->
@@ -93,10 +89,7 @@
                             <div class="layui-form-item loginBtn">
                                 <button class="layui-btn loginButton" type="button" id="btn_submit2">登录</button>
                             </div>
-                            <div class="layui-form-item loginLink clearfix">
-                                <a href="{{route('recover-pass')}}" class="fl">忘记密码？</a>
-                                <a href="{{route('register')}}" class="fr">还没有账号？快去注册吧 >></a>
-                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -109,6 +102,5 @@
 <script type="text/javascript" src="{{pix_asset('server/plugins/validform/Validform_v5.3.2_min.js',false)}}"></script>
 <script type="text/javascript" src="{{pix_asset('server/js/login/login.js')}}"></script>
 <script type="text/javascript" src="{{pix_asset('server/plugins/jquery/three.min.js')}}"></script>
-<script type="text/javascript" src="{{pix_asset('server/plugins/jquery/css3.js')}}"></script>
 </body>
 </html>

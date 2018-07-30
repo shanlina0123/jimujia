@@ -21,7 +21,7 @@ Route::group(['namespace' => 'Server'], function () {
     Route::get('wx/authorize', 'WxAuthorizeController@WxAuthorize')->name('wx-authorize');//发起授权
     Route::any('wx/authorize/back', 'WxAuthorizeController@WxAuthorizeBack');//授权回调
     //注册登陆
-    //Route::match(['get', 'post'], 'register', 'RegisterController@register')->name('register');//注册页面
+    Route::match(['get', 'post'], 'register', 'RegisterController@register')->name('register');//注册页面
     Route::match(['get', 'post'], 'login', 'LoginController@login')->name('login');//登录
     Route::get('signout', 'LoginController@signOut')->name('signout');//登出
     Route::match(['get', 'post'],'recover-pass', 'RecoverPassController@recoverPass')->name('recover-pass');//忘记密码
