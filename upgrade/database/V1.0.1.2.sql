@@ -46,7 +46,6 @@ UPDATE  `fixture_conf_vipfunctionpoint` SET viptext="不限" WHERE  id=5;
 CREATE TABLE `fixture_log_operation` (
 `id`  int(11) NOT NULL AUTO_INCREMENT ,
 `uid`  int(11) NULL DEFAULT NULL ,
-`companyid`  int(11) NULL DEFAULT NULL COMMENT '公司id' ,
 `path`  varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL ,
 `method`  varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL ,
 `ip`  varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL ,
@@ -62,8 +61,6 @@ ROW_FORMAT=Compact
 ;
 #抽奖活动 - 新增字段
 ALTER TABLE `fixture_activity_lucky` ADD COLUMN `advurl`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '广告位' AFTER `sharetitle`;
-#促销活动  - 图片
-DROP TABLE `fixture_activity_images`;
 #促销活动 - 邀请的促销
 DROP TABLE `fixture_activity_inrecord`;
 #权限功能 - 修改数据
@@ -110,6 +107,3 @@ DROP PROCEDURE `role_function`;
 ALTER TABLE `fixture_site_invitation` DROP COLUMN `participantid`;
 #公司成员 -  删除字段
 DROP TABLE `fixture_company_participant`;
-#公司 - 修改数据
-UPDATE fixture_company SET vipmechanismid=3 WHERE id=1;
---  已同步线上
