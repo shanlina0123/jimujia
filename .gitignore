@@ -1,0 +1,15 @@
+
+Homestead.yaml
+Homestead.json
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+.idea/vcs.xml
+.idea/php.xml
+.idea/modules.xml
+.idea/fixture.iml
+public/temp
+public/uploads/site/
+public/uploads/lucky/
+public/uploads/user/
+public/uploads/activity/
